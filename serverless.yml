@@ -1,0 +1,25 @@
+service: ssm-watcher
+custom: ${file(./setting.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ${file(./setting.yml):REGION}
+  environment:
+    SLACK_WEBHOOK_URL: ${file(./setting.yml):SLACK_WEBHOOK_URL}
+
+functions:
+  SSMWatcher:
+    handler: handler.SSMWatcher
+    events:
+     - cloudwatchEvent:
+         event:
+           source:
+             - "aws.ssm"
+           detail-type:
+             - "AWS API Call via CloudTrail"
+           detail:
+             eventSource:
+               - "ssm.amazonaws.com"
+             eventName:
+               - "StartSession"
