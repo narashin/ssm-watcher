@@ -1,4 +1,4 @@
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e15ec29-33d6-410d-a7fe-d4080b2e6074/_2021-05-12__4.21.16.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e15ec29-33d6-410d-a7fe-d4080b2e6074/_2021-05-12__4.21.16.png)
+![image](https://github.com/narashin/ssm-watcher/blob/master/screenshot.png?raw=true)
 # SSM-Watcher
 
 # 0. 목적
