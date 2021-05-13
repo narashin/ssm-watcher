@@ -5,6 +5,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: ${file(./setting.yml):REGION}
+  profile: ${file(./setting.yml):PROFILE}
   environment:
     SLACK_WEBHOOK_URL: ${file(./setting.yml):SLACK_WEBHOOK_URL}
 
